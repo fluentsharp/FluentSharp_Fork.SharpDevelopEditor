@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E76BCE43-8511-4CE8-A965-C0150F713CE9}</ProjectGuid>
+    <ProjectGuid>{329E0FB8-8AB1-41FD-BE38-3C2FF0B35A50}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>O2.Platform.External.SharpDevelop</RootNamespace>
-    <AssemblyName>O2_Platform_External_SharpDevelop</AssemblyName>
+    <RootNamespace>FluentSharp.SharpDevelop</RootNamespace>
+    <AssemblyName>FluentSharp.SharpDevelop</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\Administrator\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
     <FileUpgradeFlags>
@@ -492,7 +492,7 @@
     <EmbeddedResource Include="_O2SharpDevelop\ICSharpCode.TextEditor\Project\Resources\Tex-Mode.xshd" />
     <EmbeddedResource Include="_O2SharpDevelop\ICSharpCode.TextEditor\Project\Resources\VBNET-Mode.xshd" />
     <EmbeddedResource Include="_O2SharpDevelop\ICSharpCode.TextEditor\Project\Resources\XML-Mode.xshd" />
-    <None Include="O2.Platform.External.SharpDevelop.nuspec" />
+    <None Include="FluentSharp.SharpDevelop.nuspec" />
     <None Include="TmpKey.snk" />
     <None Include="_O2SharpDevelop\NRefactory\Project\Src\Lexer\BuildKeywords.pl" />
     <None Include="_O2SharpDevelop\NRefactory\Project\Src\Parser\CSharp\cs.ATG" />
@@ -537,11 +537,11 @@
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\O2.FluentSharp.BCL\FluentSharp.BCL.csproj">
+    <ProjectReference Include="..\FluentSharp.BCL\FluentSharp.BCL.csproj">
       <Project>{DF7E73CB-02AC-4689-BB8C-AC21FFCCDDC5}</Project>
       <Name>FluentSharp.BCL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\O2.FluentSharp.CoreLib\FluentSharp.CoreLib.csproj">
+    <ProjectReference Include="..\FluentSharp.CoreLib\FluentSharp.CoreLib.csproj">
       <Project>{0A7CE0E0-B092-43B5-AB80-99BA909019C9}</Project>
       <Name>FluentSharp.CoreLib</Name>
     </ProjectReference>
