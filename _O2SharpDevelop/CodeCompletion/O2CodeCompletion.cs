@@ -694,8 +694,8 @@ namespace O2.External.SharpDevelop.Ascx
                         // Skip constructors
                         continue;
                     }
-                    // if OnlyShowCodeCompleteResulstFromO2Namespace filter for only O2.* namepace
-                    if (OnlyShowCodeCompleteResultsFromO2Namespace &&  m.DeclaringType.Namespace.starts("O2") == false)
+                    // if OnlyShowCodeCompleteResulstFromO2Namespace filter for only FluentSharp.* namepace
+                    if (OnlyShowCodeCompleteResultsFromO2Namespace &&  m.DeclaringType.Namespace.starts("FluentSharp") == false)
                         continue;
 
                     // NOT WORKING only show items that match currentCodeCompleteText regex
