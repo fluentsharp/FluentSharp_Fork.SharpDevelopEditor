@@ -1,4 +1,4 @@
-using FluentSharp.BCL;
+using FluentSharp.WinForms;
 using ICSharpCode.TextEditor;
 using FluentSharp.CoreLib;
 

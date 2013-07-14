@@ -14,7 +14,7 @@ using System.Drawing.Text;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-using FluentSharp.BCL;
+using FluentSharp.WinForms;
 using ICSharpCode.TextEditor.Actions;
 using ICSharpCode.TextEditor.Document;
 

@@ -8,7 +8,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using FluentSharp.BCL;
+using FluentSharp.WinForms;
 using FluentSharp.CoreLib;
 using FluentSharp.CoreLib.API;
 

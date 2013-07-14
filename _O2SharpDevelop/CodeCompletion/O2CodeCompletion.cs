@@ -6,7 +6,7 @@ using System.Xml;
 using System.Windows.Forms;
 using System.Collections;
 using System.Collections.Generic;
-using FluentSharp.BCL;
+using FluentSharp.WinForms;
 using FluentSharp.CoreLib;
 using FluentSharp.CoreLib.API;
 using ICSharpCode.TextEditor;

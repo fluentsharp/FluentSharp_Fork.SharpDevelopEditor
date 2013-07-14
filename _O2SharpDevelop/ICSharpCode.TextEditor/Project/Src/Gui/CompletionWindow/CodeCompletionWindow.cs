@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Diagnostics;
 using System.Windows.Forms;
-using FluentSharp.BCL;
+using FluentSharp.WinForms;
 using FluentSharp.CoreLib.API;
 using ICSharpCode.TextEditor.Document;
 using FluentSharp.CoreLib;
