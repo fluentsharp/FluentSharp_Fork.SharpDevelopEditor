@@ -39,7 +39,7 @@ namespace O2.External.SharpDevelop.ScriptSamples {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FluentSharp.SharpDevelop.Resources.ScriptSamples.O2SampleScripts", typeof(O2SampleScripts).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FluentSharp.SharpDevelopEditor.Resources.ScriptSamples.O2SampleScripts", typeof(O2SampleScripts).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

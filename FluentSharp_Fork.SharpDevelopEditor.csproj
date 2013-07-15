@@ -8,8 +8,8 @@
     <ProjectGuid>{329E0FB8-8AB1-41FD-BE38-3C2FF0B35A50}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FluentSharp.SharpDevelop</RootNamespace>
-    <AssemblyName>FluentSharp.SharpDevelop</AssemblyName>
+    <RootNamespace>FluentSharp.SharpDevelopEditor</RootNamespace>
+    <AssemblyName>FluentSharp.SharpDevelopEditor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\Administrator\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
     <FileUpgradeFlags>
@@ -492,9 +492,7 @@
     <EmbeddedResource Include="_O2SharpDevelop\ICSharpCode.TextEditor\Project\Resources\Tex-Mode.xshd" />
     <EmbeddedResource Include="_O2SharpDevelop\ICSharpCode.TextEditor\Project\Resources\VBNET-Mode.xshd" />
     <EmbeddedResource Include="_O2SharpDevelop\ICSharpCode.TextEditor\Project\Resources\XML-Mode.xshd" />
-    <None Include="FluentSharp.SharpDevelop.nuspec">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="FluentSharp.SharpDevelopEditor.nuspec" />
     <None Include="TmpKey.snk" />
     <None Include="_O2SharpDevelop\NRefactory\Project\Src\Lexer\BuildKeywords.pl" />
     <None Include="_O2SharpDevelop\NRefactory\Project\Src\Parser\CSharp\cs.ATG" />

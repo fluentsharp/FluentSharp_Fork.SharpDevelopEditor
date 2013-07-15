@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
-        <id>FluentSharp.SharpDevelop</id>
+        <id>FluentSharp.SharpDevelopEditor</id>
         <version>5.0.3.0</version>
         <title>O2.Platform - SharpDevelop Editor Fork</title>
         <authors>O2 Platform</authors>

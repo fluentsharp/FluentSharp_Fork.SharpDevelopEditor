@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FluentSharp.SharpDevelop.Properties {
+namespace FluentSharp.SharpDevelopEditor.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace FluentSharp.SharpDevelop.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FluentSharp.SharpDevelop.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FluentSharp.SharpDevelopEditor.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
