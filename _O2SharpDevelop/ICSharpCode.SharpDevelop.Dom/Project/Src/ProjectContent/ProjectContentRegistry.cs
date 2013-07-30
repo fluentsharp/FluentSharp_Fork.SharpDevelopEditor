@@ -32,7 +32,8 @@ namespace ICSharpCode.SharpDevelop.Dom
 		public virtual void Dispose()
 		{
 			List<IProjectContent> list;
-			lock (contents) {
+			lock (contents) 
+            {
 				list = new List<IProjectContent>(contents.Values);
 				contents.Clear();
 			}
@@ -78,34 +79,35 @@ namespace ICSharpCode.SharpDevelop.Dom
         {
 			get 
             {
-                lock (persistence)
+                lock (contents)
                 { 
-				    if (mscorlibContent != null) return mscorlibContent;
-				    lock (contents) {
-					    if (contents.ContainsKey("mscorlib")) {
-						    mscorlibContent = (ReflectionProjectContent)contents["mscorlib"];
-						    return contents["mscorlib"];
-					    }
-					    int time = LoggingService.IsDebugEnabled ? Environment.TickCount : 0;
-					    LoggingService.Debug("Loading PC for mscorlib...");
-					    if (persistence != null) {
-						    mscorlibContent = persistence.LoadProjectContentByAssemblyName(MscorlibAssembly.FullName);
-						    if (mscorlibContent != null) {
-							    if (time != 0) {
-								    LoggingService.Debug("Loaded mscorlib from cache in " + (Environment.TickCount - time) + " ms");
-							    }
-						    }
-					    }
-					    if (mscorlibContent == null) {
-						    // We're using Cecil now for everything to find bugs in CecilReader faster
-						    //mscorlibContent = CecilReader.LoadAssembly(MscorlibAssembly.Location, this);
+				    if (mscorlibContent != null) 
+                        return mscorlibContent;
+				    
+					if (contents.ContainsKey("mscorlib")) {
+						mscorlibContent = (ReflectionProjectContent)contents["mscorlib"];
+						return contents["mscorlib"];
+					}
+					int time = LoggingService.IsDebugEnabled ? Environment.TickCount : 0;
+					LoggingService.Debug("Loading PC for mscorlib...");
+					if (persistence != null) {
+						mscorlibContent = persistence.LoadProjectContentByAssemblyName(MscorlibAssembly.FullName);
+						if (mscorlibContent != null) {
+							if (time != 0) {
+								LoggingService.Debug("Loaded mscorlib from cache in " + (Environment.TickCount - time) + " ms");
+							}
+						}
+					}
+					if (mscorlibContent == null) {
+						// We're using Cecil now for everything to find bugs in CecilReader faster
+						//mscorlibContent = CecilReader.LoadAssembly(MscorlibAssembly.Location, this);
 						
-						    // After SD 2.1 Beta 2, we're back to Reflection
-						    mscorlibContent = new ReflectionProjectContent(MscorlibAssembly, this);
-						    if (time != 0) {
-							    //LoggingService.Debug("Loaded mscorlib with Cecil in " + (Environment.TickCount - time) + " ms");
-							    LoggingService.Debug("Loaded mscorlib with Reflection in " + (Environment.TickCount - time) + " ms");
-						    }
+						// After SD 2.1 Beta 2, we're back to Reflection
+						mscorlibContent = new ReflectionProjectContent(MscorlibAssembly, this);
+						if (time != 0) {
+							//LoggingService.Debug("Loaded mscorlib with Cecil in " + (Environment.TickCount - time) + " ms");
+							LoggingService.Debug("Loaded mscorlib with Reflection in " + (Environment.TickCount - time) + " ms");
+						}
 						    if (persistence != null) {
 							    persistence.SaveProjectContent(mscorlibContent);
 							    LoggingService.Debug("Saved mscorlib to cache");
@@ -115,7 +117,7 @@ namespace ICSharpCode.SharpDevelop.Dom
 					    contents[mscorlibContent.AssemblyFullName] = mscorlibContent;
 					    contents[mscorlibContent.AssemblyLocation] = mscorlibContent;
 					    return mscorlibContent;
-				    }
+				    
                 }
 			}
 		}
