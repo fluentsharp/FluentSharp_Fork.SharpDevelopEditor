@@ -176,13 +176,13 @@ namespace O2.External.SharpDevelop.Ascx
                 () =>{
                         try
                         {
-                            lock (ProjectContentRegistry.persistence)
-                            {
+                          //  lock (ProjectContentRegistry.persistence)
+                           // {
                                 //var referencesTimer = new O2Timer("Added {0} references".format(referencesToAdd.size())).start(); ;
                                 foreach (var referencedAssembly in referencesToAdd.toList())
                                     addReference(referencedAssembly);
                                 //referencesTimer.stop();                                
-                            }
+                           // }
                         }
                         catch (Exception ex)
                         {
@@ -205,7 +205,8 @@ namespace O2.External.SharpDevelop.Ascx
                                     else
                                         parseSourceCode(codeOrFile);
                                 this.sleep(2000,false);			             
-                            }			              
+                            }	
+		                "[O2CodeCompletion] Exited startParseCodeThread".info();
                      });
         }        
         public void parseFile(string fileToParse)

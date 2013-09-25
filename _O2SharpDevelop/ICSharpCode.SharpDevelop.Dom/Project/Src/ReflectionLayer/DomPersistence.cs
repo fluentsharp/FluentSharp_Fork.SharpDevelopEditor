@@ -123,7 +123,8 @@ namespace ICSharpCode.SharpDevelop.Dom
 		{
             try
             {
-                lock (ProjectContentRegistry.persistence)
+                //lock (ProjectContentRegistry.persistence)
+                lock(cacheIndex)
                 {
                     string indexFile = GetIndexFileName();
                     using (var fs = new FileStream(indexFile, FileMode.Create, FileAccess.Write))
