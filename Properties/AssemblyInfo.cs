@@ -41,6 +41,7 @@ using System.Reflection;
 using System;
 
 [assembly: CLSCompliant(false)]
-[assembly: AssemblyVersionAttribute("5.3.0")]
+[assembly: AssemblyVersionAttribute("5.5.0")]
 [assembly: AssemblyTitleAttribute("O2's fork of SharpDevelop Editor")]
-[assembly: AssemblyFileVersionAttribute("5.3.0")]
+[assembly: AssemblyFileVersionAttribute("5.5.0")]
+[assembly: AssemblyTrademarkAttribute("OWASP O2 Platform")]
