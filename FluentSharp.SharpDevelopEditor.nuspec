@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>FluentSharp.SharpDevelopEditor</id>
-        <version>5.0.3.0</version>
+        <version>5.5.0.0</version>
         <title>O2.Platform - SharpDevelop Editor Fork</title>
         <authors>O2 Platform</authors>
         <owners>O2 Platform</owners>
@@ -12,14 +12,10 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Fork of SharpDevelop Editor (for the O2 Platform) Uses the FluentSharp APIs</description>
         <summary>Fork of SharpDevelop Editor (for the O2 Platform)</summary>
-        <releaseNotes>5.0.x  - version auto created from TeamCity
-          5.0.3.0 - Renamed assembly name
-          5.0.1.0 - Updated mono.cecil to NuGet version
-          5.0.0.0 - first Nuget release</releaseNotes>
-        <copyright>O2 Platform 2012</copyright>
+        <releaseNotes>5.5.x  - version auto created from TeamCity</releaseNotes>
+        <copyright>O2 Platform 2014</copyright>
         <language>en-GB</language>
-        <tags>Fluent OWASP O2Platform Security</tags>
-
+        <tags>FluentSharp Fluent OWASP O2Platform Security</tags>
         <dependencies>
           <group targetFramework=".NETFramework3.5">
             <dependency id="FluentSharp.WinForms" />
