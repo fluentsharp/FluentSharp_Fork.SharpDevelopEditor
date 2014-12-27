@@ -21,6 +21,7 @@ using ICSharpCode.NRefactory.Ast;
 using CSharpEditor;
 
 using O2.External.SharpDevelop.ExtensionMethods;
+using System.Threading;
 
 namespace O2.External.SharpDevelop.Ascx
 {
@@ -48,6 +49,7 @@ namespace O2.External.SharpDevelop.Ascx
         public ImageList                smallIcons;
         
         public CodeCompletionWindow     codeCompletionWindow;
+        public Thread                   ParseCodeThread;
         public Action<string>           statusMessage;
         public ExpressionResult         currentExpression;        
         public event Action<CodeCompletionWindow>   after_CodeCompletionWindow_IsAvailable;  
@@ -194,7 +196,7 @@ namespace O2.External.SharpDevelop.Ascx
         // this will regularly parse the current source code so that we have code completion for its methods 
         public void startParseCodeThread()
         {
-            O2Thread.mtaThread(
+            ParseCodeThread = O2Thread.mtaThread(
                 ()=>{						
                         while (!TextEditor.IsDisposed && UseParseCodeThread)
                             {			                    
