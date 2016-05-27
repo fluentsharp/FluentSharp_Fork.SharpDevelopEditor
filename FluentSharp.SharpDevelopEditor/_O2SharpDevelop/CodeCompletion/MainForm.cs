@@ -116,15 +116,16 @@ class A
 			ToolTipProvider.Attach(this, textEditorControl1);
 			
 			pcRegistry = new Dom.ProjectContentRegistry(); // Default .NET 2.0 registry
-			
-			// Persistence lets SharpDevelop.Dom create a cache file on disk so that
-			// future starts are faster.
-			// It also caches XML documentation files in an on-disk hash table, thus
-			// reducing memory usage.
-			pcRegistry.ActivatePersistence(Path.Combine(Path.GetTempPath(),
-			                                            "CSharpCodeCompletion"));
-			
-			myProjectContent = new Dom.DefaultProjectContent();
+
+            // Persistence lets SharpDevelop.Dom create a cache file on disk so that
+            // future starts are faster.
+            // It also caches XML documentation files in an on-disk hash table, thus
+            // reducing memory usage.
+            //pcRegistry.ActivatePersistence(Path.Combine(Path.GetTempPath(),"CSharpCodeCompletion")); //DC
+            var persistanceFolder = Path.GetFullPath(Path.Combine(PublicDI.config.O2TempDir, "..//_CSharpCodeCompletion"));
+            pcRegistry.ActivatePersistence(persistanceFolder);
+
+            myProjectContent = new Dom.DefaultProjectContent();
 			myProjectContent.Language = CurrentLanguageProperties;
 		}
 		
